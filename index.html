@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Let's Chat | Instant Messaging</title>
+        <meta name="description" content="chat and communications application to connect with friends and contacts">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Boostrap Setup -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <!-- Custom styles-->
+        <link rel="stylesheet" href="styles.css">
+        <!-- FontAwesome setup -->
+        <script src="https://kit.fontawesome.com/bf50564c9b.js" crossorigin="anonymous"></script>
+        <!-- custom js here -->
+        <script src="js/index.js"></script>
+        </head>
+    <body>
+        <main class="container-fluid" role="contains the application user interface and main functionalities">
+            <div class="row main-subcontainer">
+                <section class="navbar-wrapper">
+                    <!-- vertically fixed navbar components -->
+                    <ul class="nav d-flex align-items-center justify-content-center vertical-navbar">
+                        <!-- all profile images picked from Unsplash.com -->
+                        <li class="nav-item user-profile">
+                            <a class="nav-link" href="#"><img src="img/profile-pic-1.png" alt="your profile"></a>
+                            <!-- small status marker-->
+                            <div class="status-signal on">
+                            </div>                         
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img src="img/profile-pic-2.png" alt="your contact profile"></a>
+                            <div class="status-signal busy">
+                            </div>       
+                        </li>
+                        <li class="nav-item active-link">
+                            <a class="nav-link" href="#"><img src="img/profile-pic-3.png" alt="your contact profile"></a>
+                            <div class="status-signal on">
+                            </div>       
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img src="img/profile-pic-4.jpg" alt="your contact profile"></a>
+                            <div class="status-signal busy">
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img src="img/profile-pic-5.png" alt="your contact profile"></a>
+                            <div class="status-signal off">
+                            </div>       
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img src="img/profile-pic-6.jpg" alt="your contact profile"></a>
+                            <div class="status-signal busy">
+                            </div>       
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img src="img/profile-pic-7.png" alt="your contact profile"></a>
+                            <div class="status-signal off">
+                            </div>       
+                        </li>
+                    </ul>
+                    <div class="change-theme-btn mt-2 text-center">
+                        <!-- Use a Tooltip here! -->
+                        <small class="text-white">Toggle theme</small>
+                        <button type="button" class="btn btn-light mt-2">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                
+                </section>
+                <!-- Contains the area where the chat options are
+                    located, all the UX and chat skills go here
+                -->
+                <section class="chat-main-section">
+                    <section class="chat-header d-flex p-2">
+                        <div class="contact-img">
+                            <a class="mx-1" href="#"><img src="img/profile-pic-3.png" alt="your profile" width="50"></a>
+                            <div class="status-signal-chat-header">
+                            </div>       
+                        </div>
+                        <div class="profile-name-div w-100">
+                            <h3>Marissa Thomei</h3>
+                            <small class="time-stamp text-muted">Active now</small>
+                        </div>
+                        <!-- Start a call with this button -->
+                        <div class="call-btn">
+                            <button type="button" class="btn btn-lg bg-transparent" role="button to start a call">
+                                <i class="fa-solid fa-phone"></i>
+                            </button>
+                        </div>
+                        <!-- Start a video call button-->
+                        <div class="videocall-btn">
+                            <button type="button" class="btn btn-lg bg-transparent" role="button to start video call">
+                                <i class="fa-solid fa-video"></i>
+                            </button>
+                        </div>
+                        <!-- access additional options for the chat or profile -->
+                        <div class="dropdown-container">
+                            <!-- deleted drpdown-toggle class to get rid
+                            of the bad-looking down arrow -->
+                            <button class="btn btn-lg bg-transparent" type="button" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                                <!-- this option should bring the aside section to view and focus -->
+                              <li><a class="dropdown-item" href="#">Profile Info</a></li>
+                              <li><a class="dropdown-item" href="#">Delete Messages</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="#">Close Chat</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <!-- here's where messages we write should be shown -->
+                    <section class="chat-area-log my-2">
+                        <!-- Default test messgaes
+                        <div class="msg left-msg d-flex">
+                            <div class="msg-user-img">
+                                <img src="img/profile-pic-3.png" alt="" width="35">
+                            </div>
+                            </!-- stand alone bubble that contains the message within
+                            <div class="msg-info-bubble">
+                                <div class="msg-info-name">Marissa</div>
+                                <div class="msg-info-time">12:36</div>
+                                <div class="msg-text">
+                                    <p class="d-block">Hello Thony! Let's chat.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="msg right-msg d-flex">
+                            <div class="msg-user-img">
+                                <img src="img/profile-pic-1.png" alt="" width="35">
+                            </div>
+                            </!-- stand alone bubble that contains the message within
+                            <div class="msg-info-bubble">
+                                </!-- why showing my name on my own mesg? 
+                                <div class="msg-info-name">Thony</div>
+                                <div class="msg-info-time">12:36</div>
+                                <div class="msg-text">
+                                    <p class="d-block">Sure.</p>
+                                </div>
+                            </div>
+                        </div>
+                        end of default messages -->
+                    </section>
+                    <section class="chat-input-area w-100">
+                        <form class="chat-input-box">
+                        <!-- this badboy contains the btns
+                            and the input area, all col, on the 
+                            same line.   
+                        -->
+                            <div class="row">
+                            <!--
+                                Input box area containing three buttons
+                                emoji btn -
+                                attach file btn and
+                                send messg btn,a s well as an input where 
+                                messages could be send
+                            -->
+                                <div class="chat-box-area p-3">
+                                    <button type="button" class="btn bg-transparent emoji-btn picker chat-input-hover" role="select an emoji from the list" data-bs-toggle="dropdown">
+                                        <i class="fa-solid fa-smile"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu">
+                                        <!-- this option should bring the aside section to view and focus -->
+                                      <li><a class="dropdown-item" href="#">Profile Info</a></li>
+                                      <li><a class="dropdown-item" href="#">Delete Messages</a></li>
+                                      <li><hr class="dropdown-divider"></li>
+                                      <li><a class="dropdown-item" href="#">Close Chat</a></li>
+                                    </ul>
+                                    <button type="button" class="btn bg-transparent attach-btn chat-input-hover" role="attach a file to the conversation">
+                                        <i class="fa-solid fa-paperclip"></i>
+                                    </button>
+                                    <input type="text" class="input-msg"
+                                    name="chat-message" role="Write a message here to send it to your friend" 
+                                    placeholder="Write something...">
+                                    <!-- This button sends the message we write -->
+                                    <button type="submit" class="btn bg-transparent input-msg-btn chat-input-hover" role="send message">
+                                        Send <i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </section>
+                <!-- toggles always in fullscreen and
+                    everytime you click on the user photo
+                -->
+                <section class="toggeable-sidebar">
+                    <div class="contact-img-aside">
+                        <img src="img/profile-pic-3.png" alt="">
+                    </div>
+                    <div class="contact-name-aside">
+                        <h4>Marissa Thomei</h4>
+                        <p class="text-muted">UI/UX Designer</p>
+                        <i class="fas fa-search-location"></i>
+                        San Francisco, CA.
+                        <div class="mt-3 btn-group-aside">
+                            <button type="button" class="btn btn-dark">
+                                <i class="fa-solid fa-phone"></i>
+                            </button>
+                            <button type="button" class="btn btn-dark">
+                                <i class="fa-solid fa-video"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="contact-card-info">
+                        <h5>User Information</h5>
+                        <dl>
+                            <dt>Phone</dt>
+                                <dd>+1 234 5678</dd>
+                            <dt>Email</dt>
+                                <dd>mthomeiUX@rockmail.com</dd>
+                        
+                        </dl>
+                        <div class="media-files">
+                            <p>Media</p>
+                            <!-- showcase gallery for files
+                            sent previously -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <!-- Bootstrap JS setup -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    </body>
+</html>

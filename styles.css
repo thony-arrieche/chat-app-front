@@ -1,0 +1,200 @@
+
+/* WILL attempt to keep this styles at min */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-subcontainer {
+    max-width: 100vw;
+}
+/* same height for all cols */
+.navbar-wrapper, .chat-main-section, .toggeable-sidebar {
+    height: 100vh;
+}
+.navbar-wrapper {
+    width: 12%;
+    background-color:#292D3D;
+}
+.nav-item {
+    border: 1px solid transparent;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.nav-item img {
+    border-radius: 50%;
+    width: 50px;
+}
+/* apply this class to add a subtle border style 
+to the selected panel or active link*/
+.active-link {
+    border-bottom: 0.1rem dashed #e458ca;
+}
+/* contains a status signal that shows if user is active
+or inactive
+*/
+.status-signal {
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 50%;
+    background-color: white;
+    /* this is a BAD idea but works for know*/
+    position: absolute;
+    margin-left: 50px;
+    margin-top: -20px;
+}
+.status-signal.on {
+    background-color: greenyellow;
+    border: 0.12rem solid rgb(3, 245, 3);
+}
+
+.status-signal.off {
+    background-color: rgb(202, 195, 195);
+    border: 0.12rem solid #292D3D;
+}
+
+.status-signal.busy {
+    background-color: rgb(196, 2, 2);
+    border: 0.12rem solid rgb(153, 14, 14);
+
+}
+
+/* wrapper that contains the header, central unit and 
+botton of the chat */
+.chat-main-section {
+    width: 88%; /*conditionally changes when lg screen*/
+    background-color:#292D3D ;
+}
+
+.chat-header, .chat-input-area {
+    border-radius: 0.5rem;
+    background-color: #e458ca;
+}
+
+.chat-header {
+    margin-top: 6px;
+    height: 16vh;
+}
+
+.status-signal-chat-header {
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 50%;
+    /* this is a BAD idea but works for know*/
+    position: absolute;
+    margin-left: 42px;
+    margin-top: -15px;
+    /* color is defined only for this case */
+    background-color: greenyellow;
+    border: 0.12rem solid rgb(3, 245, 3);
+}
+
+.contact-img, .profile-name-div {
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+
+.call-btn, .videocall-btn, .dropdown-container {
+    margin-top: 0.3rem;
+    
+}
+
+.chat-area-log {
+    background-color: #EBD8FD;
+    border-radius: 0.5rem;
+    height: 67vh;
+    /*opacity: 60%;*/
+}
+/* bottom chat input area */
+.chat-input-area {
+    height: 12vh;
+    flex: 1;
+    padding-left: 0.3rem;
+}
+
+.emoji-btn, .attach-btn, .input-msg, .input-msg-btn {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.chat-input-hover:hover {
+    background-color: #EBD8FD;
+}
+
+.input-msg {
+    width: 60%;
+    outline: none;
+    padding: 0.5rem;
+    border: 2px solid #292D3D;
+    background-color: #EBD8FD;
+    transition: all 500ms ease-in-out;
+}
+.input-msg:focus {
+    transform: scale(1.02);
+    transition: all 500ms ease-in-out;
+}
+
+/* this will be a section that appears RTL when the
+user profile photo is clicked on */
+.toggeable-sidebar {
+    width: 15%;
+    background-color:#292D3D;
+    display: none;
+}
+
+.contact-name-aside {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.contact-img-aside {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-img-aside > img {
+    height: 140px;
+}
+
+.contact-name-aside, .contact-card-info {
+    text-align: center;
+    padding: 10px;
+    background-color: #EBD8FD;
+}
+
+.contact-card-info {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+@media only screen and (min-width: 800px) {
+    /* shrink when lg screen */
+    .navbar-wrapper {
+        width: 5%; 
+        background-color:#292D3D;
+    }
+
+    .chat-main-section {
+        width: 70%; /*conditionally changes when lg screen*/
+        background-color:#292D3D ;
+    }
+
+    .input-msg {
+        width: 80%;
+        padding: 0.5rem;
+        border-radius: 1rem;
+    }
+
+    .toggeable-sidebar {
+        width: 25%;
+        background-color:#e458ca;
+        display: block;
+    }
+    
+}
