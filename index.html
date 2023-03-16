@@ -33,7 +33,7 @@
                             <div class="status-signal busy">
                             </div>       
                         </li>
-                        <li class="nav-item active-link">
+                        <li class="nav-item">
                             <a class="nav-link" href="#"><img src="img/profile-pic-3.png" alt="your contact profile"></a>
                             <div class="status-signal on">
                             </div>       
@@ -61,7 +61,7 @@
                     </ul>
                     <div class="change-theme-btn mt-2 text-center">
                         <!-- Use a Tooltip here! -->
-                        <small class="text-white">Toggle theme</small>
+                        <small class="text-center">Toggle theme</small>
                         <button type="button" class="btn btn-light mt-2">
                             <i class="fas fa-moon"></i>
                         </button>
@@ -161,16 +161,38 @@
                                     <button type="button" class="btn bg-transparent emoji-btn picker chat-input-hover" role="select an emoji from the list" data-bs-toggle="dropdown">
                                         <i class="fa-solid fa-smile"></i>
                                     </button>
-                                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu">
+                                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu p-2">
                                         <!-- this option should bring the aside section to view and focus -->
-                                      <li><a class="dropdown-item" href="#">Profile Info</a></li>
-                                      <li><a class="dropdown-item" href="#">Delete Messages</a></li>
-                                      <li><hr class="dropdown-divider"></li>
-                                      <li><a class="dropdown-item" href="#">Close Chat</a></li>
+                                      <div class="row">
+                                        <li class="col"><a class="dropdown-item" href="#">&#128510;</a></li>
+                                        <li class="col"><a class="dropdown-item" href="#">&#128512;</a></li>
+                                        <li class="col"><a class="dropdown-item" href="#">&#128513;</a></li>
+                                        <li class="col"><a class="dropdown-item" href="#">&#128515;</a></li>
+                                      </div>
+                                      <div class="row">
+                                        <li class="col"><a class="dropdown-item" href="#">&#128516;</a></li>
+                                        <li class="col"><a class="dropdown-item" href="#">&#128517;</a></li>
+                                        <li class="col"><a class="dropdown-item" href="#">&#128047;</a></li>
+                                        <li class="col"><a class="dropdown-item" href="#">&#128048;</a></li>
+                                      </div>
+                                      <div class="row">
+                                        <li class="col"><a class="dropdown-item" href="#">&#128056;</a></li>
+                                        <li class="col"><a class="dropdown-item" href="#">&#128060;</a></li>
+                                        <li class="col"><a class="dropdown-item" href="#">&#128061;</a></li>
+                                        <li class="col"><a class="dropdown-item" href="#">&#128062;</a></li>
+                                      </div>
+                                      <div class="row">
+                                        <li class="col"><a class="dropdown-item" href="#">&#128049;</a></li>
+                                        <li class="col"><a class="dropdown-item" href="#">&#128151;</a></li>
+                                        <li class="col"><a class="dropdown-item" href="#">&#128081;</a></li>
+                                        <li class="col"><a class="dropdown-item" href="#">&#128063;</a></li>
+                                      </div>
                                     </ul>
+                                    <!-- btn to attach files -->
                                     <button type="button" class="btn bg-transparent attach-btn chat-input-hover" role="attach a file to the conversation">
                                         <i class="fa-solid fa-paperclip"></i>
                                     </button>
+                                    <!-- send msg input text field -->
                                     <input type="text" class="input-msg"
                                     name="chat-message" role="Write a message here to send it to your friend" 
                                     placeholder="Write something...">
