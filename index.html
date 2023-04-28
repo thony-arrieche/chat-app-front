@@ -9,7 +9,12 @@
         <!-- Boostrap Setup -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <!-- Custom styles-->
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="styles-dark.css">
+        <!-- favicon link 
+        Chat Bubble icon by Icons8
+        -->
+        <link rel="shortcut icon" href="img/ico/favicon.png" type="image/x-icon">
+        
         <!-- FontAwesome setup -->
         <script src="https://kit.fontawesome.com/bf50564c9b.js" crossorigin="anonymous"></script>
         <!-- custom js here -->
@@ -59,11 +64,12 @@
                             </div>       
                         </li>
                     </ul>
-                    <div class="change-theme-btn mt-2 text-center">
+                    <!-- Toggle Theme btn -->
+                    <div class="mt-2 text-center">
                         <!-- Use a Tooltip here! -->
-                        <small class="text-center">Toggle theme</small>
-                        <button type="button" class="btn btn-light mt-2">
-                            <i class="fas fa-moon"></i>
+                        <small id="toggle-text" class="text-center">Toggle theme</small>
+                        <button onclick="toggleTheme()" type="button" class="btn btn-light mt-2">
+                            <i id="toggle-icon" class="fa-solid fa-sun"></i>
                         </button>
                     </div>
                 
@@ -111,7 +117,7 @@
                         </div>
                     </section>
                     <!-- here's where messages we write should be shown -->
-                    <section class="chat-area-log my-2">
+                    <section id="chat-log" class="chat-area-log my-2">
                         <!-- Default test messgaes
                         <div class="msg left-msg d-flex">
                             <div class="msg-user-img">
@@ -193,11 +199,11 @@
                                         <i class="fa-solid fa-paperclip"></i>
                                     </button>
                                     <!-- send msg input text field -->
-                                    <input type="text" class="input-msg"
+                                    <input type="text" id="input-msg" class="input-msg"
                                     name="chat-message" role="Write a message here to send it to your friend" 
                                     placeholder="Write something...">
                                     <!-- This button sends the message we write -->
-                                    <button type="submit" class="btn bg-transparent input-msg-btn chat-input-hover" role="send message">
+                                    <button id="send-msg-btn" class="btn bg-transparent input-msg-btn chat-input-hover" role="send message">
                                         Send <i class="fa-solid fa-arrow-right"></i>
                                     </button>
                                 </div>
@@ -244,6 +250,52 @@
                 </section>
             </div>
         </main>
+        <script type="text/javascript">
+            // handle the chat log space in a var
+            var chatLog = document.getElementById("chat-log");
+            // setup the array that holds the messages
+            const msgArrayStore = [];
+
+            // chatLog.innerHTML = "Hello world"
+            
+            // wait for a click to trigger the function
+            // this function collects the msg written in our input
+            // and stores it in a pass variable to then print it
+            // inside the chat-log html
+
+            document.getElementById("send-msg-btn").onclick =
+            () => {
+                
+                var stringMsg = document.getElementById("input-msg");
+
+                chatLog.innerHTML = "<p>" + stringMsg.value + "</p>";
+
+            }
+
+            // toggle theme function
+            function toggleTheme() {
+                // get all link elements in a array
+                // select the element using an index
+                var theme = document.getElementsByTagName('link')[1];
+                var toggleIcon = document.getElementById('toggle-icon').className;
+
+                // change the value of the href attr
+                // to swap the sheet
+                if (theme.getAttribute('href') == 'styles-dark.css') {
+                    theme.setAttribute('href', 'styles-light.css');
+                    // not working
+                    toggleIcon.className = 'fa-solid ' + 'fa-moon';
+                    console.log(toggleIcon);
+                } else {
+                    theme.setAttribute('href', 'styles-dark.css');
+                    // not working
+                    toggleIcon.className = 'fa-solid' + 'fa-sun';
+                }
+    
+
+            }
+
+        </script>
         <!-- Bootstrap JS setup -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     </body>
